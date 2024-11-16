@@ -1,0 +1,17 @@
+name: Readme - svg text
+on:
+  workflow_dispatch:
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - name: Typing - Readme SVG Text
+      uses: tonalmathew/readme-typing@2.0.6
+      env:
+        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+      with:
+        INPUT_TEXT: |
+          Hi 👋, I'm Tonal Mathew.
+          I'm a Frontend Developer 😉.
